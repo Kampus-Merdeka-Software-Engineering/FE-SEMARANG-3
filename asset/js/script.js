@@ -22,3 +22,17 @@ navLink.addEventListener("click", () => {
         responsiv.className = "navbar-right";
     }
 });
+
+const pop = document.querySelectorAll('.box');
+
+pop.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        element.style.transform = 'scale(1.05)';
+        element.style.transitionDuration = '0.3s';
+    });
+
+    element.addEventListener('mouseleave', () => {
+        element.style.transform = 'scale(1)';
+        element.style.transitionDuration = '0.3s';
+    });
+});
