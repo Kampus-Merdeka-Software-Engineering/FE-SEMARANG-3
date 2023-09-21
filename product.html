@@ -1,367 +1,211 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-}
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Jost',sans-serif;
-}
+<!--doctype html-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product E-commerce - Website</title>
+    <link rel="stylesheet" href="asset/css/product.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
 
-/*Navrbar*/
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
-    transition-duration: 0.5s;
-    z-index: 2;
-  }
-  
-  .navcount {
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-    position: relative;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 80px;
-  }
-  
-  .navbar-left {
-    display: flex;
-  }
-  
-  .logo {
-    color: white;
-    font-family: 'Red Hat Display';
-    font-weight: 600;
-    font-size: 26px;
-    letter-spacing: 1.5px;
-  }
-  
-  .navbar-right{
-    display: flex;
-    gap: 60px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 550;
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    border-bottom: 2px solid transparent;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .nav-active {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 550;
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .nav-link:hover {
-    color: red;
-    border-bottom: 2px solid white;
-  }
-  
-  .nav-active:hover {
-    color: red;
-    border-bottom: 2px solid white;
-  }
-  
-  .nav-icon {
-    display: none;
-    color: white;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .navbar {
-        display: block;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .logo {
-        font-size: 21px;
-        padding-left: 30px;
-    }
-    .navbar-left {
-        display: flex;
-        justify-content: space-between;
-    }
-    .nav-link,
-    .nav-active {
-        font-size: 17px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .nav-first {
-        margin-top: 20px;
-    }
-    .nav-active {
-        background: linear-gradient(90deg, #e7c5ae 0%, #fcf5eb00 100%);
-        border-top: 1px solid #895e3f;
-        border-width: 1px;
-    }
-    .nav-icon {
-        align-self: center;
-        padding-right: 30px;
-    }
-    .navbar-right {
-        display: block;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    .navbar-right a{display: none;}
-    .navbar-left a.nav-icon {
-      float: right;
-      display: block;
-    }
-  }
-  @media screen and (max-width: 800px) {
-  .navbar-right.responsive {position: relative;}
-  .navbar-left.responsive .nav-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar-right.responsive a{
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  }
-  @media screen and (max-width: 400px) {
-    .logo {
-        font-size: 18px;
-        padding-left: 25px;
-    }
-    .nav-link,
-    .nav-active {
-        font-size: 16px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    .nav-active {
-        background: black;
-        border-top: 1px solid white;
-        border-width: 1px;
-    }
-    .nav-icon {
-        align-self: center;
-        padding-right: 25px;
-    }
-  }
+<body>
+    <!-- navbar -->
+    <header class="header">
+        <div class="navcount">
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a class="logo">Climbing.Co</a>
+                    <a href="javascript:void(0);" class="nav-icon" id="toggleButton">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="navbar-right" id="navbarRight">
+                    <a href="index.html" class="nav-active nav-first">Home</a>
+                    <a href="product.html" class="nav-link">Catalog</a>
+                    <a href="kontak.html" class="nav-link">About Us</a>
+                    <a href="kontak.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+      </header>
 
+  <!--section category-->
+  <section class="category">
+    <h1>Products Category</h1>
+    <div class="box-category">
+     
+      <a href="#" class="box">
+        <img src="asset/img/product 1.png">
+        <h3>Shoes</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="asset/img/product 2.png">
+        <h3>Sling Bag</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="asset/img/product 3.png">
+        <h3>Walking Stick</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="asset/img/product 4.png">
+        <h3>Backpack</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="asset/img/product 5.png">
+        <h3>Hat</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="asset/img/product 6.png">
+        <h3>Jacket</h3>
+      </a>
+
+    </div>
+  </section>
   
-/*section category*/
-.category .box-category {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 0.1rem;
-  }
-  .category {
-    padding-top: 80px; /* Tambahkan padding atas untuk menghindari tumpang tindih dengan navbar */
-}
-  .category h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 3rem;
-    margin-top: 0; /* Tambahkan margin atas 0 */
-}
-  .category .box-category .box {
-    text-align: center;
-  }
-  .category .box-category .box:hover h3{
-    color: rgb(141, 116, 116);
-  }
-  .category .box-category .box img {
-    height: 8rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  .category .box-category .box h3 {
-    font-size: 1rem;
-    color: black;
-    font-weight: bolder;
-    list-style: none;
-  }  
+   <section class="product">
+    <h4 class="product-heading">"Shoes"</h4>
+    <div class="slider-container">
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu1.jpg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-/*section product*/
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu2.jpg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-.product{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    margin: 30px auto;
-}
-.slider-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 1rem;
-}
-.product-heading{
-    font-size: 28px;
-    text-transform: uppercase;
-    font-family: 'Open Sans',sans-serif;
-    color: #313131;
-    margin-bottom: 30px;
-}
-.product-box{
-    width: 100%;
-    padding: 15px;
-    border: 1px solid rgba(0,0,0,0.08);
-    position: relative;
-}
- 
-.product-img-container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-}
-.product-img{
-    width: 100%;
-    height:300px;
-    display: flex;
-}
- 
-.product-img img{
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
-    object-position: center;
-}
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu3.jpg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-.product-box-offer {
-    position: absolute;
-    left: 30px;
-    top: 20px;
-    width: 65px;
-    height: 24px;
-    color: #ffffff;
-    background-color: #e63b3b;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    z-index: 1; /* Tambahkan z-index yang lebih rendah dari product-img */
-}
-.product-box-text{
-     margin-top: 5px;
-     font-family: 'Open Sans',sans-serif;
- }
-.product-title{
-    color: #333333;
-    font-weight: 600;
-    transition: all ease 0.3s;
-    text-decoration: none;
-}
-.product-title:hover{
-    opacity: 0.7;
-    transition: all ease 0.3s;
-}
-.product-category{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    color: #ff25257c;
-}
-.product-category span{
-    color: #acacac;
-    font-size: 0.9rem;
-    margin:5px 0px;
-}
-.price-buy{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-}
-.price-buy .p-price{
-    font-size: 1.3rem;
-    color: #333333;
-    font-weight: 700;
-}
-.price-buy .p-buy-btn{
-    color: #e63b3b;
-    margin: 0px 5px;
-    font-weight: 500;
-    text-decoration: none;
-}
-.price-buy .p-buy-btn:hover{
-    text-decoration: underline;
-}
- 
-@media(max-width:500px){
-    .product-slider-heading{
-        text-align: center;
-        font-size: 1.3rem;
-    }
-    .product-slider{
-        width: 100%;
-    }
-    .product-img a,
-    .product-img{
-    height:230px;}
-    
-.product-img a img{
-    animation:none;
-}
-.product-img-back{
-    display: none;
- }
- .product-img-container:hover .product-img-back{
-     display: none;
- }
- .product-img-container:hover .product-img-front{
-     display: block;
- }
-}
-@media(max-width:400px){
-    .product-img a,
-    .product-img{
-    height:190px;}
-    .product-box-offer{
-        top: 10px ;
-        left: 20px ;
-    }
-}
-  
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu4.jpeg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu5.jpg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <span class="product-box-offer">-20%</span>
+                <div class="product-img-container">
+                    <div class="product-img">
+                    <img alt="" class="product-img-front" src="asset/img/sepatu6.jpeg"/>
+                    </div>
+                </div>
+            <div class="product-box-text">
+                 <!--category-->
+                 <div class="product-category">
+                    <span>Shoes</span>
+                </div>
+                <!--tile--->
+                <a href="#" class="product-title">Shoes xxxxxxxxxxxx</a>
+                <!--Price--->
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="asset/js/product.js"></script>
+</body>
+</html>
