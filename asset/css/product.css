@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Open Sans',sans-serif;
 }
 a{
     text-decoration: none;
@@ -10,10 +9,10 @@ a{
 body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Jost',sans-serif;
 }
 
-/*navbar*/
-
+/*Navrbar*/
 .header {
     position: fixed;
     top: 0;
@@ -22,89 +21,88 @@ body{
     background-color: black;
     border-style: solid;
     border-width: 1px;
-    border-color: white;
     border-radius: 0 0 25px 25px;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(8px);
     transition-duration: 0.5s;
     z-index: 2;
-}
-
-.navcount {
+  }
+  
+  .navcount {
     width: 100%;
     max-width: 1300px;
     margin: auto;
     position: relative;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 80px;
-}
-
-.navbar-left {
-    display: flex;
-}
+  }
   
-.logo {
+  .navbar-left {
+    display: flex;
+  }
+  
+  .logo {
     color: white;
     font-family: 'Red Hat Display';
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
-}
-
-.navbar-right{
+  }
+  
+  .navbar-right{
     display: flex;
     gap: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     color: white;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
     font-weight: 550;
-    font-family: 'Red Hat Display';
+    font-family: 'Open Sans',sans-serif;
     font-weight: 600;
     letter-spacing: 1.2px;
     border-bottom: 2px solid transparent;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.nav-active {
+  }
+  
+  .nav-active {
     color: white;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
     font-weight: 550;
-    font-family: 'Red Hat Display';
+    font-family: 'Open Sans',sans-serif;
     font-weight: 600;
     letter-spacing: 1.2px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.nav-link:hover {
+  }
+  
+  .nav-link:hover {
     color: red;
     border-bottom: 2px solid white;
-}
-
-.nav-active:hover {
+  }
+  
+  .nav-active:hover {
     color: red;
     border-bottom: 2px solid white;
-}
-
-.nav-icon {
+  }
+  
+  .nav-icon {
     display: none;
     color: white;
-}
-
-@media screen and (max-width: 800px) {
+  }
+  
+  @media screen and (max-width: 800px) {
     .navbar {
         display: block;
         padding-left: 0;
@@ -139,15 +137,15 @@ body{
     .navbar-right {
         display: block;
     }
-}
-@media screen and (max-width: 800px) {
+  }
+  @media screen and (max-width: 800px) {
     .navbar-right a{display: none;}
     .navbar-left a.nav-icon {
       float: right;
       display: block;
     }
-}
-@media screen and (max-width: 800px) {
+  }
+  @media screen and (max-width: 800px) {
   .navbar-right.responsive {position: relative;}
   .navbar-left.responsive .nav-icon {
     position: absolute;
@@ -159,8 +157,8 @@ body{
     display: block;
     text-align: left;
   }
-}
-@media screen and (max-width: 400px) {
+  }
+  @media screen and (max-width: 400px) {
     .logo {
         font-size: 18px;
         padding-left: 25px;
@@ -180,7 +178,7 @@ body{
         align-self: center;
         padding-right: 25px;
     }
-}
+  }
 
   
 /*section category*/
@@ -189,12 +187,16 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 0.1rem;
   }
+  .category {
+    padding-top: 80px; /* Tambahkan padding atas untuk menghindari tumpang tindih dengan navbar */
+}
   .category h1 {
     text-align: center;
     font-size: 2rem;
     color: black;
     margin-bottom: 3rem;
-  }
+    margin-top: 0; /* Tambahkan margin atas 0 */
+}
   .category .box-category .box {
     text-align: center;
   }
@@ -265,20 +267,21 @@ body{
     object-position: center;
 }
 
- .product-box-offer{
-     position: absolute;
-     left: 30px;
-     top: 20px;
-     width: 65px;
-     height: 24px;
-     color: #ffffff;
-     background-color: #e63b3b;
-     border-radius: 20px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-size: 0.7rem;   
- }
+.product-box-offer {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 65px;
+    height: 24px;
+    color: #ffffff;
+    background-color: #e63b3b;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    z-index: 1; /* Tambahkan z-index yang lebih rendah dari product-img */
+}
 .product-box-text{
      margin-top: 5px;
      font-family: 'Open Sans',sans-serif;
