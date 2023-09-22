@@ -208,6 +208,7 @@
   font-weight: 600;
   padding: 11px 18px;
   background-color: transparent;
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid rgb(255, 255, 255);
   outline: none;
@@ -249,7 +250,6 @@
   font-size: 1rem;
   color: black;
   font-weight: bolder;
-
 } 
 
 /*section banner*/
