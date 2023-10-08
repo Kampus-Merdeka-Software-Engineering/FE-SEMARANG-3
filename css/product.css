@@ -200,10 +200,11 @@ body{
   }
   .product-card {
     width: 250px;
-    position:relative ;
+    position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 30px auto;
     background:#025465e0;
+  
   }
   .badge {
     position: absolute;
