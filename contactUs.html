@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" 
   rel="stylesheet">
-  <title>Contact Us Clambing Co.</title>
+  <title>Contact Us Form Clambing Co.</title>
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 
@@ -46,15 +46,15 @@
     <div class="container">
       <div class="title">Contact Us Form</div>
 
-      <form action="#">
+      <form class="form" id="formCustomer">
         <div class="form-row">
           <div class="input-data">
-            <input type="text" required />
+            <input type="text" id="firstName" name="firstName" required />
             <div class="underline"></div>
             <label for="">First Name</label>
           </div>
           <div class="input-data">
-            <input type="text" required />
+            <input type="text" id="lastName" name="lastName" required />
             <div class="underline"></div>
             <label for="">Last Name</label>
           </div>
@@ -62,12 +62,12 @@
 
         <div class="form-row">
           <div class="input-data">
-            <input type="email" required />
+            <input type="email" id="email" name="email" required />
             <div class="underline"></div>
             <label for="">Email Address</label>
           </div>
           <div class="input-data">
-            <input type="tel" required />
+            <input type="tel" id="phone" name="phone" required />
             <div class="underline"></div>
             <label for="">Phone Number</label>
           </div>
@@ -75,7 +75,7 @@
 
         <div class="form-row">
           <div class="input-data textarea">
-            <textarea required></textarea>
+            <input type="text" id="message" name="message" required />
             <div class="underline"></div>
             <label for="">Write your message</label>
           </div>
@@ -84,7 +84,7 @@
         <div class="form-row submit-btn">
           <div class="input-data">
             <div class="inner"></div>
-            <input type="submit" value="Submit" />
+            <input type="submit"  class="cta" value="Submit" />
           </div>
         </div>
       </form>
@@ -96,9 +96,9 @@
   <div class="footer-left">
       <h3> Payment Method</h3>
       <div class="credit">
-        <img src="/asset/img/footer 1.jpg" alt="">
-        <img src="/asset/img/footer 2.jpg" alt="">
-        <img src="/asset/img/footer 3.jpg" alt="">
+        <img src="asset/img/footer 1.jpg" alt="">
+        <img src="asset/img/footer 2.jpg" alt="">
+        <img src="asset/img/footer 3.jpg" alt="">
       </div>
       <p>&copy; 2023 Company. All right reserved.</p></p>
   </div>
@@ -135,6 +135,5 @@
 </footer>
 
 <script src="js/contactUs.js"></script>
-
 </body>
 </html>

@@ -2,10 +2,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-a{
     text-decoration: none;
 }
+
 body{
     margin: 0px;
     padding: 0px;
@@ -18,12 +17,8 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    border-style: solid;
+    background-color: #025465a8;
     border-width: 1px;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
     transition-duration: 0.5s;
     z-index: 2;
   }
@@ -48,7 +43,7 @@ body{
   
   .logo {
     color: white;
-    font-family: 'Red Hat Display';
+    font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
     font-weight: 600;
     font-size: 26px;
     letter-spacing: 1.5px;
@@ -88,12 +83,12 @@ body{
   }
   
   .nav-link:hover {
-    color:rgb(184, 130, 86);
+    color: #da836f;
     border-bottom: 1px solid white;
   }
   
   .nav-active:hover {
-    color: rgb(184, 130, 86);
+    color: #da836f;
     border-bottom: 1px solid white;
   }
   
@@ -126,7 +121,7 @@ body{
         margin-top: 20px;
     }
     .nav-active {
-        background: linear-gradient(90deg, #e7c5ae 0%, #fcf5eb00 100%);
+        background: linear-gradient(90deg, #2993a8a8 0%, #025465a8 100%);
         border-top: 1px solid #895e3f;
         border-width: 1px;
     }
@@ -162,7 +157,7 @@ body{
 /*banner*/
 .banner {
     margin: 0;
-    background-image: url(/asset/img/BANNER.png);
+    background-image: url(/asset/img/Banner.jpg);
     width: 100%;
     height: 50vh;
     background-size: cover;
@@ -170,144 +165,156 @@ body{
   }
 .bannerteks {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     padding-top: 120px;
 }
 
 /*section product*/
-.product{
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.719);
-}
-.product-heading {
-    font-size: 18px;
+.title {
+    font-size: 20px;
     text-transform: uppercase;
     font-family: 'Open Sans',sans-serif;
-    color: #313131;
+    color: #025465e0;
     text-align: center;
     position: relative;
     padding : 10px;
-}
-.product-heading::after{ 
+    margin-top: 20px;
+  }
+  .title::after{ 
     content: ''; 
-    background-color: #000000; 
-    width: 60px; 
-    height: 2px; 
+    background-color: #da8378;
+    width: 100px; 
+    height: 5px; 
+    border-radius: 5px; 
     position: absolute; 
     bottom: 0; 
-    left: 47.8%; 
-} 
-.slider-container{
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  .product {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(4,1fr);
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 40px 50px 30px;
-}
-.product-box{
-    width: 100%;
-    gap: 2rem;
-    border: 1px solid rgb(65, 39, 35);
-    position: relative;
-    padding: 10px 7px 5px;
-    background-color: #ffffff;
-} 
-.product-img{
-    width: 100%;
-    height:200px;
-    display: flex;
-}
-.product-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-.product-box-offer {
+  }
+  .product-card {
+    width: 250px;
+    position:relative ;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 30px auto;
+    background:#025465e0;
+  }
+  .badge {
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 65px;
-    height: 24px;
-    color: #ffffff;
-    background-color: #e63b3b;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    z-index: 1; /* Tambahkan z-index yang lebih rendah dari product-img */
-}
-.product-box-text{
-    padding: 10px 15px 10px;
-    font-family: 'Open Sans',sans-serif;
- }
-.product-title{
-    color: #333333;
-    font-weight: 600;
-    transition: all ease 0.3s;
-    text-decoration: none;
-}
-.product-title:hover{
-    opacity: 0.7;
-    transition: all ease 0.3s;
-}
-.product-category{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    color: #ff25257c;
-}
-.product-category span{
-    color: #acacac;
-    font-size: 0.9rem;
-    margin:5px 0px;
-}
-.price-buy{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-}
-.price-buy .p-price{
-    font-size: 15px;
-    color: #333333;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
     font-weight: 700;
-}
-.price-buy .p-buy-btn{
-    color: #e63b3b;
-    margin: 0px 5px;
-    font-weight: 500;
+    background: #f14c36;
+    color: #fff;
+    padding: 3px 10px;
+  }
+  
+  .product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    padding: 40px;
+    background: #ffffff;
+  }
+  
+  .product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .product-details {
+    padding: 30px;
+    }
+  
+  .product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
+  
+  .product-details h4 a {
+    font-weight: 480;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #000000;
     text-decoration: none;
-}
-.price-buy .p-buy-btn:hover{
-    text-decoration: underline;
-}
- 
-@media screen and (max-width: 480px) {
-    .banner {
-        width: 100%;
-        height: 35vh;
+    transition: 0.3s;
+  }
+  
+  .product-details h4 a:hover {
+    color: #f14c36;
+  }
+  
+  .product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #ffffff;
+  }
+  
+  .product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  
+  .product-bottom-details div {
+    float: left;
+    width: 50%;
+  }
+  
+  .product-price {
+    font-size: 15px;
+    color: #e91010;
+    font-weight: 500;
+  }
+  
+  .product-price small {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+    color: #f30505;
+  }
+  
+  .product-links {
+  text-align: right;
+  }
+  
+  .product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  .product-links a:hover {
+  color: #da836f;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product {
+      grid-template-columns: 1fr; /* Mengubah menjadi satu kolom pada layar kecil */
+      margin-bottom: 2rem; /* Menambah jarak antar kotak pada layar kecil */
     }
-    .bannerteks {
-        font-size: 20px;
-        text-align: center;
-    }
-    .slider-container {
-        display: grid;
-        grid-template-columns: 1fr; 
-        margin-bottom: 2rem; 
-    }
-    .product-heading::after {
-        left: 42.5%;
-    }
-}
+  }
 
-@media screen and (min-width: 481px) and (max-width: 880px) {
+  @media screen and (min-width: 481px) and (max-width: 880px) {
     .banner {
         width: 100%;
         height: 32vh;
@@ -316,19 +323,16 @@ body{
         font-size: 30px;
         text-align: center;
     }
-    .slider-container {
+    .product{
         display: grid;
         grid-template-columns: repeat(2, 1fr) ;
         margin-bottom: 2rem; 
     }
-    .product-heading::after {
-        left: 46.5%;
-    }
-}
+  }
 
 /*Bagian Footer*/
 .footer {
-    background-color: #000000;
+    background-color: #025465e0;;
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
@@ -350,7 +354,7 @@ body{
       }
   }
   
-  .footer .footer-left{
+  .footer .footer-left {
       width: 30%;
   }
   
@@ -395,7 +399,7 @@ body{
   }
   
   .footer .footer-center i:hover {
-    background-color: rgb(184, 130, 86);
+    background-color: #f26727;
   }
   
   .footer .footer-center p {
@@ -435,6 +439,7 @@ body{
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 20px;
+  
   }
   
   .footer .footer-media {
@@ -442,22 +447,22 @@ body{
   }
   
   .footer .footer-media a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: #33383b;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 50px;
-    margin-right: 3px;
-    margin-bottom: 5px;
-}
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 50px;
+      margin-right: 3px;
+      margin-bottom: 5px;
+  }
   
   .footer .footer-media a:hover {
-      background-color: rgb(184, 130, 86);
+      background-color: #f26727;
   }
   
   @media (max-width: 880px) {
