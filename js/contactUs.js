@@ -41,7 +41,7 @@ const feedbackData = {
   message: message.value
 };
 
-fetch('https://be-semarang-3.cyclic.app/api/catalog', {
+fetch('https://sore-plum-magpie-sari.cyclic.app/proses_feedback', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
