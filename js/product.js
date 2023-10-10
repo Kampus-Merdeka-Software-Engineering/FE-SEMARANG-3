@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
                           <div class="product-bottom-details">
                             <div class="product-price">Rp ${price}</div>
                             <div class="product-links">
-                              <a href=""><i class="fa fa-heart"></i></a>
-                              <a href=""><i class="fa fa-shopping-cart"></i></a>
+                              <a ><i class="fa fa-heart"></i></a>
+                              <a ><i class="fa fa-shopping-cart"></i></a>
                             </div>
                           </div>
                         </div>
